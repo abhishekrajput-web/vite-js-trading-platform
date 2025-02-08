@@ -16,11 +16,12 @@ import AboutHero from "./components/User/About/AboutHero";
 import ContactPage from "./components/User/Contact/ContactPage";
 import ServicesPage from "./components/User/Service/ServicesPage";
 import CompanyDetailsPage from "./views/admin/CompanyDetail";
-
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
     return (
         <BrowserRouter>
+        <Toaster/>
         <Routes>
           {/* Routes with layouts */}
           <Route path="/admin/*" element={<Admin />} />

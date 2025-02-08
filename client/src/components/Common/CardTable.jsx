@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import '../../assets/styles/table.css';
 
-const Table = () => {
+const CardTable = () => {
   const [niftyData, setNiftyData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -117,4 +117,4 @@ const Table = () => {
   );
 };
 
-export default Table;
+export default CardTable;

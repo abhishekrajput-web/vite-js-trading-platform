@@ -1,7 +1,7 @@
 
 import { useEffect, useState, useMemo } from "react";
 import axios from "axios";
-import { Card, CardHeader, CardBody, Typography, Button } from "@material-tailwind/react";
+import { Card, CardHeader, CardBody, Typography } from "@material-tailwind/react";
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
@@ -40,7 +40,7 @@ export function Tables() {
 
   const fetchStockData = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/stocks");
+      const response = await axios.get("http://localhost:5000/api/data/stocks");
       setStocks(response.data);
       toast.success('Data updated successfully!');
     } catch (error) {
